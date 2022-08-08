@@ -1,0 +1,13 @@
+version: "3.9" 
+
+services: 
+    main-service:
+        container_name: jupyter-lab
+        image: jupyter-lab
+        build:
+            context: .
+            dockerfile: Dockerfile
+        stdin_open: true
+        tty: true
+        ports: 
+            - "8800:8800"
